@@ -13,13 +13,13 @@ try {
   split.forEach((pair) => {
     let [l1, _, __, l2] = pair.split(" ");
 
-    if (!Object.keys(freq).includes(l1)) {
+    if (!freq[l1]) {
       freq[l1] = [1, 0];
     } else {
       freq[l1] = [freq[l1][0] + 1, freq[l1][1]];
     }
 
-    if (!Object.keys(freq).includes(l2)) {
+    if (!freq[l2]) {
       freq[l2] = [0, 1];
     } else {
       freq[l2] = [freq[l2][0], freq[l2][1] + 1];
